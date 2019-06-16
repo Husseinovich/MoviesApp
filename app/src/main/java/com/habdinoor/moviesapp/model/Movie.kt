@@ -1,5 +1,8 @@
 package com.habdinoor.moviesapp.model
 
+/**
+ * Movie POJO class
+ */
 data class Movie(
     val backdrop_path: String,
     val overview: String,
