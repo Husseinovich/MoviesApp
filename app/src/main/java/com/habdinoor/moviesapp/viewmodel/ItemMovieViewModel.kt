@@ -6,6 +6,9 @@ import androidx.lifecycle.ViewModel
 import com.habdinoor.moviesapp.model.Movie
 
 class ItemMovieViewModel(model: Movie): ViewModel() {
+    /**
+     * We pass the movie POJO to the ItemMovieViewModel
+     */
     var title: ObservableField<String> = ObservableField()
     var overview: ObservableField<String> = ObservableField()
     var poster: ObservableField<String> = ObservableField()

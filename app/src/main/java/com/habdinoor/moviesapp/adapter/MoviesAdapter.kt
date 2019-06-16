@@ -12,6 +12,8 @@ import com.habdinoor.moviesapp.viewmodel.ItemMovieViewModel
 
 class MoviesAdapter(val context: Context): RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
+
+
     protected var movies: MutableList<Movie> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,6 +38,10 @@ class MoviesAdapter(val context: Context): RecyclerView.Adapter<MoviesAdapter.Vi
     class ViewHolder(private val binding: MovieItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(model: Movie){
             val viewModel = ItemMovieViewModel(model)
+            /**
+             * itemMovie is the name given to the data variable in the movie_item.xml file
+             * We then pass the view mode instead of manually setting the view using findviewbyid.
+             */
             binding.itemMovie = viewModel
 
         }

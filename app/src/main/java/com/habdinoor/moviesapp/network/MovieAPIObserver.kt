@@ -16,7 +16,6 @@ abstract class MovieAPIObserver<T> constructor(private val compositeDisposable: 
     override fun onNext(t: T) {
         onApiSuccess(t)
     }
-
     override fun onError(e: Throwable) {
         onApiError(e)
     }
